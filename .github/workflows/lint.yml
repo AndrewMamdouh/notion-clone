@@ -1,5 +1,5 @@
 name: Lint
-
+run-name: ${{ github.actor }} is running ${{ github.job }}
 on: [push]
 
 jobs:
@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install Dependencies
-      - run: yarn install --no-immutable
+        run: yarn install --no-immutable
       - name: Run Eslint
-      - run: yarn run lint
+        run: yarn run lint
